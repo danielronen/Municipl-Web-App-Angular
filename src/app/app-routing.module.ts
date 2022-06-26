@@ -11,8 +11,6 @@ const routes: Routes = [
   {path: 'residents', component: ResidentCardComponent},
   {path: 'events', component: EventComponentComponent},
   {path: 'businesses', component: BusinessComponentComponent},
-  // {path: 'list', component: EmployeesListComponent},
-  // When we come to `localhost:4200` - it will go to: `localhost:4200/students`
   {path: '', redirectTo: '/', pathMatch:'full'}
 ];
 

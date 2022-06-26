@@ -3,7 +3,6 @@ import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { Observable, switchMap } from 'rxjs';
 import Events  from '../../Events' ;
 import { EventsService } from '../../events.service';
-import { FormsModule } from '@angular/forms';
 
 
 
@@ -25,16 +24,14 @@ export class EventDetailComponent implements OnInit {
       switchMap((params: ParamMap) => {
         if (!isNaN(Number(params.get('id')))){
           console.log(this.event.forEach(e => e?.code));
-          return this.service.getEventByCode(Number(params.get('code')));
+          return this.service.getEvent(Number(params.get('code')));
         }
-        else return this.service.getEventByCode(0);
+        else return this.service.getEvent(0);
       })
     );
   }  
 
-  goBack(){
-    // router.navigate() - a function that gets an array of values(parameters), 
-    // and go to that URL in the website. 
+  goBack(){ 
     this.router.navigate(['/events']);
   }
 }

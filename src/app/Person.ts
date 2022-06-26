@@ -63,7 +63,4 @@ export default class Person{
         this.Image = image
     }
 
-    toString():string{
-        return ` Name: ${this.Name}, Age: ${this.Age}, id: ${this.Id}, City: ${this.City}, is a male: ${this.IsMale}`;
-    }
 }

@@ -12,16 +12,12 @@ import { ActivatedRoute } from '@angular/router';
 export class EmployeeComponent implements OnInit {
 
   employees!: Observable<Employee[]>
-  selectedId: any = "";
-
 
   constructor(private service: EmployeeService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-
     this.employees = this.route.paramMap.pipe(
-      switchMap((params) => {
-        this.selectedId = params.get('id');
+      switchMap(() => {
         return this.service.getEmployees();
       })
     )

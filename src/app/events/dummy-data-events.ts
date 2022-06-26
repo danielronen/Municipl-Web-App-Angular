@@ -11,4 +11,4 @@ export const EVENTS: Events[] = [
    new Events("טיול תבלינים",560,"הגינה העירונית",20,new Person("209009430","Daniel",25,true,"Ariel","fdsfsd")),
    new Events("מסיבת סוף הקיץ",620,"אמפי פארק אריאל",750,new Person("209009430","Daniel",25,true,"Ariel","fdsfsd")),
 
-] 
+]; 

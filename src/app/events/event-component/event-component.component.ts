@@ -12,7 +12,6 @@ import { EventsService } from '../events.service';
 export class EventComponentComponent implements OnInit {
 
   events!: Observable<Events[]>
-  selectedId: any = "";
 
 
   constructor(private service: EventsService, private route: ActivatedRoute) { }
@@ -20,8 +19,7 @@ export class EventComponentComponent implements OnInit {
   ngOnInit(): void {
 
     this.events = this.route.paramMap.pipe(
-      switchMap((params) => {
-        this.selectedId = params.get('code');
+      switchMap(() => {
         return this.service.getEvents();
       })
     )
