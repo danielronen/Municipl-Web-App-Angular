@@ -1,0 +1,10 @@
+.detail{
+    font-size: 12px;
+    color: red;
+    margin-left: 350px;
+    margin-top: 50px;
+    display: inline-block;
+}
+hr{
+    color: red;
+}

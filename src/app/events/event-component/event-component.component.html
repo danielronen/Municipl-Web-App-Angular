@@ -1,0 +1,36 @@
+<div class="container">
+    <h3>רשימת האירועים</h3>
+
+    <table class="table" >
+        <thead>
+          <tr>
+            <th>קוד אירוע</th>
+            <th>שם האירוע</th>
+            <th>כתובת</th>
+            <th >מס' משתתפים</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr  *ngFor="let event of events | async" >
+            <th scope="row">{{event.code}}</th>
+            <td>{{event.name}}</td>
+            <td>{{event.address}}</td>
+            <td [ngStyle]="{'background-color': event.participants < 100 && event.participants > 30 ? 'yellow' : event.participants < 30 ?'red' : 'green'}"><b>{{event.participants}}</b></td>
+            <td><a class="btn btn-sucess" [routerLink]="['/event', event.code]">ערוך</a></td>
+        </tr>
+
+        </tbody>
+      </table>
+      <!-- <app-event-detail></app-event-detail> -->
+
+      <div class="detail">
+        <p> מס' משתתפים באירוע 30-100</p>
+        <hr style="color: 'yellow'; height: 5px;">
+        <p style="color: red;"> מס' משתתפים באירוע < 30</p>
+        <hr style="color: 'red'; height: 5px;">
+        <p style="color: green;"> מס' משתתפים באירוע > 100</p>
+        <hr style="color: 'green'; height: 5px;">
+      </div>
+
+    
+</div>

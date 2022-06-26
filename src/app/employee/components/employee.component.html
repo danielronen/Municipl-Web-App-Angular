@@ -1,0 +1,42 @@
+<div class="container">
+    <h3>רשימת העובדים</h3>
+
+    <table class="table" >
+        <thead>
+          <tr>
+            <th>תעודת זהות</th>
+            <th>שם מלא</th>
+            <th>גיל</th>
+            <th >מין</th>
+            <th >עיר מגורים</th>
+            <th >עיסוק</th>
+            <th >שעות עבודה בחודש</th>
+            <th >שכר שעתי</th>
+            <th >משכורת</th>
+            <th >תמונה</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr  *ngFor="let employee of employees | async" [ngStyle]="{'border-color': employee.PerHour * employee.Hours > 3000 ? 'blue' : 'red'}">
+            <th scope="row">{{employee.Id}}</th>
+            <td>{{employee.Name}}</td>
+            <td>{{employee.Age}}</td>
+            <td *ngIf="employee.IsMale">זכר</td>
+            <td *ngIf="!employee.IsMale">נקבה</td>
+            <td>{{employee.City}}</td>
+            <td>{{employee.Duty}}</td>
+            <td>{{employee.Hours}}</td>
+            <td>{{employee.PerHour}}</td>
+            <td>{{employee.PerHour * employee.Hours}}</td>
+            <td><img src="{{employee.Image}}" alt="fdfdf" style="width: 55px; height:60px"></td>
+          </tr>
+
+        </tbody>
+      </table>
+      <div class="detail">
+        <p style="color: blue;"> קו תחתון כחול - שכר גבוה מ 3000</p>
+        <hr style="color: 'blue'; height: 5px;">
+        <p> קו תחתון אדום - שכר 3000 ומטה</p>
+        <hr style="color: 'red'; height: 5px;">
+      </div>
+</div>

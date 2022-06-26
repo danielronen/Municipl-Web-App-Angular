@@ -1,0 +1,16 @@
+<div class="container">
+    <h2>עריכת נתוני אירוע<hr></h2>
+    <div *ngIf="event | async as event">
+        <h3>{{ event.name }}</h3>
+        <p>קוד: {{ event.code }}</p>
+        <label>שם האירוע:</label>
+         <input type="text" [(ngModel)]='event.name' class='form-control'/> 
+         <label>כמות משתתפים:</label>
+         <input type="text" [(ngModel)]='event.participants' class='form-control'/> 
+         <label>כתובת / מיקום האירוע:</label>
+         <input type="text" [(ngModel)]='event.address' class='form-control'/> 
+        <br/>
+        <button class="btn btn-primary" (click)="goBack()">עדכן נתונים</button>
+    </div>
+</div>
+

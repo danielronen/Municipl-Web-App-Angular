@@ -1,0 +1,32 @@
+<div class="container">
+    <h3>רשימת העסקים</h3>
+
+    <table class="table" >
+        <thead>
+          <tr>
+            <th>מספר עסק</th>
+            <th>שם העסק</th>
+            <th>כמות עובדים</th>
+            <th >רווח חודשי ממוצע</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr  *ngFor="let bussiness of bussinesses | async" [ngStyle]="{'border-color': bussiness.gainMoney < 5000 ? 'red' : 'blue'}">
+            <th scope="row">{{bussiness.busNum}}</th>
+            <td>{{bussiness.duty}}</td>
+            <td>{{bussiness.empNum}}</td>
+            <td>{{bussiness.gainMoney}}</td>
+          </tr>
+
+        </tbody>
+      </table>
+
+      <div class="detail">
+        <p> קו תחתון אדום - שכר ממוצע נמוך מ 5000</p>
+        <hr style="color: 'red'; height: 5px;">
+        <p style="color: blue;"> קו תחתון כחול - שכר ממוצע גבוה מ 5000</p>
+        <hr style="color: 'blue'; height: 5px;">
+      </div>
+
+    
+</div>
