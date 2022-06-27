@@ -1,6 +1,7 @@
 # Municipal Web App
 
 A municipal web app for Angular course bonus task.
+
 The City's app is Israeli so all the content in hebrew and rtl.
 
 [Link for github pages](https://danielronen.github.io/Municipl-Web-App-Angular/) 
