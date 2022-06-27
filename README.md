@@ -1,19 +1,21 @@
 # Municipal Web App
 
-A municipal web app for Angular course bonus task
+A municipal web app for Angular course bonus task.
+The City's app is Israeli so all the content in hebrew and rtl.
 
+[Link for github pages](https://danielronen.github.io/Municipl-Web-App-Angular/) 
 
-#### Home page
+## <ins>Home page</ins>
 ![](IMG/1.png)
 
-#### City workers table
+## <ins>City workers table</ins>
 ![](IMG/2.png)
-#### Bussinesses list
+## <ins>Bussinesses list</ins>
 ![](IMG/3.png)
-#### Events list
+## <ins>Events list</ins>
 with option to edit the data of the event
 ![](IMG/4.png)
-#### example
+## <ins>example</ins>
 ![](IMG/5.png)
 
 its uploanding the data automaticli
